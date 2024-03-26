@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creat User</title>
+</head>
+<body>
+<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+    <label for="firstName">First name</label>
+    <input type="text" th:field="*{firstName}" id="First name" placeholder="First name">
+    <label for="lastName">Last name</label>
+    <input type="text" th:field="*{lastName}" id="Last name" placeholder="Last name">
+    <input type="submit" value="Creat User">
+</form>
+</body>
+</html>
