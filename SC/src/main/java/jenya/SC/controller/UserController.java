@@ -2,6 +2,7 @@ package jenya.SC.controller;
 
 import jenya.SC.model.User;
 import jenya.SC.service.UserService;
+import jenya.SC.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,10 +14,10 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 @Autowired
     public UserController(UserService userService){
-        this.userService = userService;
+        this.userService = (UserServiceImpl) userService;
     }
 
     @GetMapping("users")
